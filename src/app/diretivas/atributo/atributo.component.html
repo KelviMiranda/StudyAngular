@@ -1,0 +1,44 @@
+<ng-content select="h1"></ng-content>
+
+<h1>
+    Ng Class
+</h1>
+
+<button [ngClass]="{'active': valor, 'disabled':!valor}" (click)=" valor = ! valor ">
+    Button
+</button>
+
+<p [ngClass]="btnYellow">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, aut.
+</p>
+
+<h2>NgStyle</h2>
+
+ <p [ngStyle]="{'height':  heightpx, 'background': backgroundColor}">
+    Lorem ipsum dolor sit amet.
+</p> 
+
+<h2>
+    NgModule
+</h2>
+
+<input type="text" [(ngModel)]="nome">
+<button (click)="save(nome)"> save </button>
+<ul>
+    <li *ngFor="let item of list">
+        {{item.nome}}
+    </li>
+</ul>
+
+<input type="text" [(ngModel)]="nome">
+
+<ng-template ngFor let-item [ngForOf]="list">
+    <ul>
+        <li>
+            {{item.nome}}
+        </li>
+    </ul>
+</ng-template>
+<button (click)="save(nome)"> save </button>  -
+
+<ng-content select="h3"></ng-content>

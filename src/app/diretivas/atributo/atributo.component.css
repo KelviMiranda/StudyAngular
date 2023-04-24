@@ -1,0 +1,35 @@
+
+button{
+    border: none;
+    padding: .6rem 2rem;
+    border-radius: 5px;
+    margin-left: 2rem;
+    box-shadow: 0 .6rem .6rem rgba(0, 0, 0, .4);
+}
+.active{
+    background-color: #4aca4c;
+    color: white;
+}
+
+.active::after{
+    content: 'Active';
+}
+
+.disabled:disabled{
+    background-color: #ccc;
+    color: #333;
+}
+
+.disabled:after{
+    content: 'Disabled';
+}
+
+.yellow{
+    background-color: yellow;
+    margin-top: 1rem;
+}
+
+.font{
+    font-weight: 500;
+    font-size: 1.3rem;
+}

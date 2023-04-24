@@ -1,0 +1,47 @@
+<h4>NgIf</h4>
+<p *ngIf="condition; else conditionElse">
+  True
+</p>
+
+<ng-template #conditionElse>
+    <p>False</p>
+</ng-template> 
+
+<p *ngIf="conditionClick; else changeCondition">
+  A condição é {{conditionClick}}
+</p>
+
+<ng-template #changeCondition>
+  <p> é falsa</p>
+</ng-template>
+
+<button (click)="onClickCondition()"> click </button>
+<h4>NgFor</h4>
+
+<ul>
+    <li *ngFor="let item of list; let i = index" (click)="onclickListEvent(i)">[{{i}}] -> Nome:{{item.nome}} | Idade:{{item.idade}}</li>
+</ul>
+
+Nome:<input type="text" name="nome"><br><br>
+Idade:<input type="text" name="idade"><br><br>
+<p><button (click)="clickAdd()">Add</button></p>
+
+<h1>
+  NgSwitch 
+</h1>
+
+<input type="text" [(ngModel)]="nome">
+
+<div [ngSwitch]="nome">
+  <p *ngSwitchCase="'kelvin'">
+    kelvin
+  </p>
+  
+  <p *ngSwitchCase="'dener'">
+    Dener
+  </p>
+
+  <p *ngSwitchDefault>
+    Busca Inválida
+  </p>
+</div>

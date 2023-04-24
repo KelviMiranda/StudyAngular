@@ -1,0 +1,28 @@
+ <h3> Interpolation </h3>
+<p>
+    idade é <= 20 ?: {{idade <= 20}} 
+</p>
+
+<p>
+    quanto é {{idade}} + {{maisUm}} = {{idade + maisUm}}
+</p>
+
+<h3>Property Binding</h3>
+
+<img [src]="imgSrc" [alt]="alt">
+
+<p>{{alt}}</p>
+
+<h4>Two way Data Binding</h4>
+
+Nome: <input type="text" [(ngModel)]="nome" name="nome">
+
+{{nome}}
+
+<h4>Event Binding</h4>
+
+<div style="background:red; width:320px; height:320px" (mousemove)="mouseMoveTest($event)">
+
+</div>
+
+{{position.x}} - {{position.y}}
